@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.Container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: sans-serif;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  width: 75%;
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .valueFrequency {
+    display: flex;
+
+    h1 {
+      flex: 1;
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+  }
+
+  .input {
+    display: flex;
+    height: 2rem;
+    margin-bottom: 1rem;
+
+    input {
+      border: 2px solid black;
+      flex: 1;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    height: 5rem;
+
+    .add {
+      border: 3px solid green;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      cursor: pointer;
+      border-right: none;
+      transition: background-color 0.15s, color 0.15s, font-size 0.15s;
+    }
+
+    .add:hover {
+      background-color: green;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .add:active {
+      font-size: 1.25rem;
+      opacity: 0.6;
+    }
+
+    .remove {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border: 3px solid red;
+      cursor: pointer;
+      border-left: none;
+      transition: background-color 0.15s, color 0.15s, font-size 0.15s;
+    }
+
+    .remove:hover {
+      background-color: red;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .remove:active {
+      font-size: 1.25rem;
+      opacity: 0.6;
+    }
+
+    button {
+      flex: 1;
+    }
+  }
+
+  .submit {
+    margin: 2rem 0;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: uppercase;
+    transition: font-size 0.15s, opacity 0.15s;
+  }
+
+  .submit:hover {
+    font-size: 2.25rem;
+    opacity: 0.7;
+  }
+
+  .submit:active {
+    font-size: 2.5rem;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .input {
+    input {
+      width: 100%;
+    }
+  }
+}
